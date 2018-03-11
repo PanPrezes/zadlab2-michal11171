@@ -64,9 +64,6 @@ System.out.println("Podaj numer miesiaca");
         
     }
 
-{
-    
-}
 //zadanie z dodawaniem aż do 1000
 System.out.println("Zadanie z dodawaniem do 1000");
 int n=1;
@@ -119,9 +116,10 @@ System.out.println("Zadanie nr 1");
         System.out.println("Twoje wyrazenie to: "+a3+"x^2+"+a4+"x+"+a5);
         d=(a4*a4)-(4*a3*a5);
         System.out.println("Wartosc delty to:"+d);
+        if(d>=0){
         p=(float) Math.sqrt(d);
         System.out.println("Wartosc pierwiastka z delty to:"+p);
-        if(p<0) {System.out.println("Delta mniejsza od zera - brak miejsc zerowych");}
+       
         if(p>0)
         {
             x1=(-a4-p)/(2*a3);
@@ -132,8 +130,132 @@ System.out.println("Zadanie nr 1");
         {x3=-a4/(2*a3);
         System.out.println("Delta rowna zero - miejsce zerowe to "+x3);
         }
-        
-//
-    }
+        }
+        else {System.out.println("Delta mniejsza od zera - brak miejsc zerowych");
+//Zadanie 2
+System.out.println("Zadanie nr 2");
+   double pl,dl,rads1,rads2;
+       
+   System.out.println("Podaj pierwsza liczbe");
+            Scanner odczytt;
+        odczytt = new Scanner(System.in);
+        pl = odczytt.nextDouble();
+           System.out.println("Podaj druga liczbe");
+            Scanner odczyttt;
+        odczyttt = new Scanner(System.in);
+        dl = odczyttt.nextDouble();
+        rads1 = Math.toRadians(pl);
+        rads2 = Math.toRadians(dl);
     
+System.out.println("Podaj jakie działanie chcesz wykonac: + - * / ^ k-pierwiastek v-sinus b-cosinus n-tangens m-cotangens 0-aby wyjsc z kalkulatora");
+int cal=1;
+
+
+
+               while(cal==1){ 
+Scanner odczytz = new Scanner(System.in);
+        char z1;
+
+
+        z1 = odczytz.next().charAt(0);
+  
+
+  
+        switch (z1) {
+             case '+':  
+             {
+               System.out.println(pl + dl);
+               break;
+           }
+               case '-':  
+             {
+               System.out.println(pl - dl);
+               break;
+           }
+               case '*':  
+             {
+               System.out.println(pl * dl);
+               break;
+           }
+               case '/':  
+             {
+               System.out.println(pl / dl);
+               break;
+           }
+             case '^':  
+             {
+               System.out.println(pow(pl, dl));
+               break;
+           }
+              case 'k':  
+             {
+               System.out.println(sqrt(pl));
+               System.out.println(sqrt(dl));
+               break;
+           }
+               case 'v':  
+             {
+               System.out.println(Math.sin(rads1));
+               System.out.println(Math.sin(rads2));
+               break;
+           }
+               case 'b':  
+             {
+               System.out.println(Math.cos(rads1));
+               System.out.println(Math.cos(rads2));
+               break;
+           }
+                case 'n':  
+             {
+               System.out.println(Math.tan(rads1));
+               System.out.println(Math.tan(rads2));
+               break;
+           }
+                case 'm':  
+             {
+               System.out.println(1/ Math.tan(rads1));
+               System.out.println(1/ Math.tan(rads2));
+               break; 
+           }
+             default :
+                {
+                    System.out.println("Nie ma takiego dzialania");
+                }
+             
+             
+             
+    }
+        System.out.println("Jesli chcesz ponownie uruchomic kalkulator wciśnij 1");
+         Scanner jeden;
+        jeden = new Scanner(System.in);
+        cal = jeden.nextInt();
+        if(cal==1){System.out.println("Podaj jakie działanie chcesz wykonac: + - * / ^ k-pierwiastek v-sinus b-cosinus n-tangens m-cotangens 0-aby wyjsc z kalkulatora");}
+        }
+ //Zadanie 3
+System.out.println("Zadanie nr 3");           
+int tab[] = new int[10];
+Scanner odc = new Scanner(System.in);
+    System.out.println("Podaj 10 liczb ktore chcesz zapisac w tablicy");
+    int i;
+for(i=1;i<=10;i++)
+{
+tab[i] = odc.nextInt();
 }
+for(i=1;i<=10;i++)
+{
+    System.out.println(tab[i]);
+}
+   
+    
+    
+    
+    
+    
+    
+    
+    }
+}
+}
+
+    
+
