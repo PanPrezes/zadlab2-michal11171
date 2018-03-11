@@ -1,6 +1,8 @@
 package pl.edu.ur.main;
 
+import static java.lang.Math.sqrt;
 import java.util.Scanner;
+import static java.lang.Math.*;
 
 /**
  *
@@ -14,6 +16,8 @@ public class Main {
     public static void main(String[] args) {
         // TODO zad 3, 4, 6, 7
 //zadanie z miesiacami
+System.out.println("Zadanie z miesiacami");
+System.out.println("Podaj numer miesiaca");
         Scanner odczyt = new Scanner(System.in);
         int k = odczyt.nextInt();
 {
@@ -64,6 +68,7 @@ public class Main {
     
 }
 //zadanie z dodawaniem aż do 1000
+System.out.println("Zadanie z dodawaniem do 1000");
 int n=1;
 int a1;
 int s;
@@ -84,6 +89,7 @@ while(a1<=1000)
     
 }
 //zadanie 5
+System.out.println("Zadanie nr 5");
 for(int x=20;x>=0;x--)
 {   if(x==2||x==6||x==9||x==15||x==19)
     continue;
@@ -91,13 +97,14 @@ for(int x=20;x>=0;x--)
     
 }
 //zadanie 1
+System.out.println("Zadanie nr 1");
         int a3, a4,a5;
-        float d,x1,x2,p;
+        float d,x1,x2,x3,p;
         System.out.println("Podaj wartosc A");
          Scanner odczyt3;
         odczyt3 = new Scanner(System.in);
         
-        a3 = odczyt1.nextInt();
+        a3 = odczyt1.nextInt(); 
                 System.out.println("Podaj wartosc B");
          Scanner odczyt4;
         odczyt4 = new Scanner(System.in);
@@ -110,10 +117,23 @@ for(int x=20;x>=0;x--)
         a5 = odczyt1.nextInt();
         
         System.out.println("Twoje wyrazenie to: "+a3+"x^2+"+a4+"x+"+a5);
-        d=a4^2-4*a3*a5;
+        d=(a4*a4)-(4*a3*a5);
         System.out.println("Wartosc delty to:"+d);
-        p=sqrt(d);
-
+        p=(float) Math.sqrt(d);
+        System.out.println("Wartosc pierwiastka z delty to:"+p);
+        if(p<0) {System.out.println("Delta mniejsza od zera - brak miejsc zerowych");}
+        if(p>0)
+        {
+            x1=(-a4-p)/(2*a3);
+            x2=(-a4+p)/(2*a3);
+            System.out.println("Delta wieksza od zera- miejsca zerowe to:"+x1+" oraz "+x2);
+        }
+        if(p==0) 
+        {x3=-a4/(2*a3);
+        System.out.println("Delta rowna zero - miejsce zerowe to "+x3);
+        }
+        
+//
     }
     
 }
