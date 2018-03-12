@@ -85,14 +85,6 @@ while(a1<=1000)
     a1=a1+s;
     
 }
-//zadanie 5
-System.out.println("Zadanie nr 5");
-for(int x=20;x>=0;x--)
-{   if(x==2||x==6||x==9||x==15||x==19)
-    continue;
-    System.out.println(x);
-    
-}
 //zadanie 1
 System.out.println("Zadanie nr 1");
         int a3, a4,a5;
@@ -231,7 +223,11 @@ Scanner odczytz = new Scanner(System.in);
         cal = jeden.nextInt();
         if(cal==1){System.out.println("Podaj jakie działanie chcesz wykonac: + - * / ^ k-pierwiastek v-sinus b-cosinus n-tangens m-cotangens 0-aby wyjsc z kalkulatora");}
         }
- //Zadanie 3
+
+
+
+
+ //Zadanie 3*
 System.out.println("Zadanie nr 3");           
 int tab[] = new int[10];
 Scanner odc = new Scanner(System.in);
@@ -247,14 +243,37 @@ for(i=1;i<=10;i++)
 }
    
     
+ }
+//Zadanie 4*
+
+
+
+//zadanie 5
+System.out.println("Zadanie nr 5");
+for(int x=20;x>=0;x--)
+{   if(x==2||x==6||x==9||x==15||x==19)
+    continue;
+    System.out.println(x);
     
-    
-    
-    
-    
-    
-    }
 }
+//Zadanie 6
+        int zxc1;
+        boolean zxc2=true;
+while(zxc2==true)	
+  {System.out.println("Podaj liczbe. Wprowadzenie liczby mniejszej od zera zakonczy dzialanie programu.");
+            Scanner zxc;
+        zxc = new Scanner(System.in);
+        zxc1 = zxc.nextInt();
+        if(zxc1<0){zxc2=false;};
+  
+  
+  
+  }
+        //Zadanie 7*
+        System.out.println("Zadanie nr 7");
+
+}
+
 }
 
     
