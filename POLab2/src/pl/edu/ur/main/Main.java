@@ -1,46 +1,76 @@
-package pl.edu.ur.main;
-
 import static java.lang.Math.sqrt;
 import java.util.Scanner;
-import static java.lang.Math.*;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 /**
  *
- * @author marcin
+ * @author Patryk
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO zad 3, 4, 6, 7
-
- //Zadanie 3
+public class zadanie1 {
+    
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args){
+  /*      Scanner odczyt = new Scanner(System.in);
+      int z;
+    System.out.println("Padaj numer zadania");
+    z = odczyt.nextInt();
+    switch (z)
+    {
+        case 1:
+        int a,b,c;
+            System.out.println("Podaj a");
+            a = odczyt.nextInt();
+            System.out.println("Podaj b");
+            b = odczyt.nextInt();
+            System.out.println("Podaj c");
+            c = odczyt.nextInt();
+        double delta,x1,x2;
+        delta = b*b-(4*a*c); 
+        if (delta ==0){
+             x1 =(-b/2*a);
+             System.out.println("Pierwiastek wielomianu to " +x1);
+        }
+        else{
+            x1 = ((-b+sqrt(delta))/(2*a));
+             x2 = ((-b-sqrt(delta))/(2*a));
+             System.out.println("Pierwiastki wielomianu to " +x1  +x2);
+        }
+        break;
+        case 2:
+            
+            
+            }
+   */
+         //z3
  {
- System.out.println("Zadanie nr 3");           
+ System.out.println("Zad 3");           
            System.out.println("Zacznij wpisywac elementy tablicy");
            double[] tab= new double[10];
            int i;
            for(i=0;i<10;i++)
               {
-           Scanner odczytxxx = new Scanner(System.in);
-            tab[i] = odczytxxx.nextDouble(); 
+           Scanner odczyt = new Scanner(System.in);
+            tab[i] = odczyt.nextDouble(); 
            int z=i+1;
            System.out.println("Wpisałeś element tablicy nr: "+z);
            }
-           int w = 1;
-           while(w!=0){
-           System.out.println("1 - Wypisz od pierwszego elementu.");
-           System.out.println("2 - Wypisz od ostatniego elementu.");
-           System.out.println("3 - Wypisz elementy nieparzyste.");
-           System.out.println("4 - Wypisz elementy parzyste.");
-           System.out.println("0 - Wylacz program.");
+           int s = 1;
+           while(s!=0){
+           System.out.println("1 - Wyświetl od pierwszego elementu.");
+           System.out.println("2 - Wyświetl od ostatniego elementu.");
+           System.out.println("3 - Wyświetl elementy nieparzyste.");
+           System.out.println("4 - Wyswietl elementy parzyste.");
+           System.out.println("0 - Koniec.");
            
-           Scanner odczytxxx= new Scanner(System.in);
-           w=odczytxxx.nextInt();
+           Scanner odczyt= new Scanner(System.in);
+           s=odczyt.nextInt();
            int j;
-           switch(w){
+           switch(s){
               case 1:
                for(j=0;j<10;j++)
                System.out.println("Elementy od pierwszego: "+tab[j]);
@@ -58,61 +88,61 @@ public class Main {
                System.out.println("Elementy parzyste: "+tab[j]);
              break;
              case 0:
-                 w=0;
+                 s=0;
                  break;
-             default : System.out.println("Tej opcji nie ma na liscie");
+             default : System.out.println("błędne polecenie");
                
                
            }
            
           } 
     }
-//Zadanie 4
-{        {System.out.println("Zadanie nr 4");
+//z4
+{        {System.out.println("Zad 4");
  double[] tab1= new double[10];
-       int ix;
+       int k;
        double suma = 0,srednia = 0;
        double iloczyn=1;
        double wynik=0;
-       for(ix=0;ix<10;ix++)
+       for(k=0;k<10;k++)
        {
-           System.out.println("Podaj element tablicy nr: "+ix);
-       Scanner odczyt11 = new Scanner(System.in);
-        tab1[ix] = odczyt11.nextDouble(); 
+           System.out.println("Podaj element tablicy : "+k);
+       Scanner odczyt = new Scanner(System.in);
+        tab1[k] = odczyt.nextDouble(); 
         }
-       int zx = 1;
-       while(zx!=0){
+       int u = 1;
+       while(u!=0){
            System.out.println("1 - Suma 2 - Iloczyn 3 - Srednia 4 - Minimalna wartosc 5 - Maksymalna wartosc 0 - Koniec");
 
-                     Scanner odczyt11= new Scanner(System.in);
-           zx=odczyt11.nextInt();
+                     Scanner odczyt= new Scanner(System.in);
+           u=odczyt.nextInt();
            
-           switch(zx){
+           switch(u){
               case 1:
-               for(ix=0;ix<10;ix++){
-                suma=suma+tab1[ix];
+               for(k=0;k<10;k++){
+                suma=suma+tab1[k];
                 }
                System.out.println("Suma = "+suma);
              break;
              case 2:
-               for(ix=0;ix<10;ix++){
-                iloczyn=iloczyn*tab1[ix];
+               for(k=0;k<10;k++){
+                iloczyn=iloczyn*tab1[k];
                  }
                System.out.println("Iloczyn = "+iloczyn);
              break;
              case 3:
                  suma=0;
-               for(ix=0;ix<10;ix++){
-                suma=suma+tab1[ix];}
+               for(k=0;k<10;k++){
+                suma=suma+tab1[k];}
                 srednia=suma/10;
                 System.out.println("Srednia = "+srednia);
                 
              break;
              case 4: wynik=tab1[0];
-                 for(ix=1;ix<10;ix++){
+                 for(k=1;k<10;k++){
                  
-                 if(wynik>tab1[ix]){
-                     wynik=tab1[ix];
+                 if(wynik>tab1[k]){
+                     wynik=tab1[k];
                  }
                  }
                  System.out.println("Minimum = "+wynik);
@@ -120,50 +150,43 @@ public class Main {
              break;
              case 5:
             wynik=tab1[0];
-                 for(ix=1;ix<10;ix++){
+                 for(k=1;k<10;k++){
                  
-                 if(wynik<tab1[ix]){
-                     wynik=tab1[ix];
+                 if(wynik<tab1[k]){
+                     wynik=tab1[k];
                  }
                  }
                  System.out.println("Maksimum = "+wynik);
              break;
-          
-       
-       
-       
-       
-
-       
     }
        }
 
-//Zadanie 6
-{         {System.out.println("Zadanie nr 6");
-    int zxc1;
+//z 6
+{         {System.out.println("Zad 6");
+    int lc;
         
 while(true)	
   {System.out.println("Podaj liczbe. Wprowadzenie liczby mniejszej od zera zakonczy dzialanie programu.");
-            Scanner zxc;
-        zxc = new Scanner(System.in);
-        zxc1 = zxc.nextInt();
-        if(zxc1<0){break;};}
+           
+        Scanner odczyt = new Scanner(System.in);
+        lc = odczyt.nextInt();
+        if(lc<0){break;};}
   }
-//Zadanie 7*
-        {System.out.println("Zadanie nr 7");
+//z 7
+        {System.out.println("Zad 7");
       System.out.println("Podaj rozmiar tablicy");
-        int ax;
+        int n;
         int nrtab=1;
-                Scanner odczyt1xx;
-        odczyt1xx = new Scanner(System.in);
-         ax = odczyt1xx.nextInt();
-         int[] tab2= new int[ax];
-         for(int xi=0;xi<ax;xi++){
+                Scanner odczyt1;
+        odczyt1 = new Scanner(System.in);
+         n = odczyt1.nextInt();
+         int[] tab2= new int[n];
+         for(int xi=0;xi<n;xi++){
           System.out.println("Podaj "+nrtab+" element tablicy");
-          Scanner odczytxxx = new Scanner(System.in);
-           Scanner odczyt1xxx;
-        odczyt1xxx = new Scanner(System.in);
-            tab2[xi] = odczyt1xxx.nextInt(); 
+          Scanner odczytx = new Scanner(System.in);
+           Scanner odczyt1x;
+        odczyt1x = new Scanner(System.in);
+            tab2[xi] = odczyt1x.nextInt(); 
             nrtab=nrtab+1;
          }
 int temp;
@@ -181,20 +204,10 @@ zmiana++;
 }
 for(int g=0; g<tab2.length; g++){
 System.out.print(tab2[g]+" ");}
-
-        
-        
-
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       }}}}}}
-
-
+}
+}
+}
+}
+    }
+}
+// Zrobione 
